@@ -1,7 +1,7 @@
 #!/bin/bash
 
 sudo pacman -Sy
-sudo pacman -S i3 i3-gaps polybar feh picom git zsh bat xclip rofi net-tools mpv flameshot telegram-desktop kitty chromium neofetch figlet
+sudo pacman -S i3 i3-gaps polybar feh picom git zsh bat xclip rofi alacritty net-tools mpv flameshot telegram-desktop kitty chromium neofetch figlet
 
 mkdir -p ~/.local/share/fonts/
 

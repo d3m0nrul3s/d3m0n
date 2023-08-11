@@ -13,7 +13,7 @@ exec ~/.config/polybar/launch.sh
 
 #start chromium
 
-bindsym $mod+Shift+h exec chromium
+bindsym $mod+Shift+h exec firefox
 
 #picom start
 exec picom &
@@ -31,7 +31,7 @@ bindsym $mod+Escape exec shutdown -h now
 #bindsym $mod+Shift+f exec firefox
 #for_window [class="Firefox"] move to workspace 2
 
-bindsym $mod+Shift+f exec ~/Документы/librewolf
+#bindsym $mod+Shift+f exec ~/Документы/librewolf
 
 #lock desktop
 #bindsym $mod+Shift+d exec i3lock-fancy

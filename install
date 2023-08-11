@@ -1,0 +1,36 @@
+#!/bin/bash
+
+sudo pacman -Sy
+sudo pacman -S i3 i3-gaps polybar feh picom git zsh bat xclip rofi net-tools mpv flameshot telegram-desktop kitty chromium neofetch figlet
+
+mkdir -p ~/.local/share/fonts/
+
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Iosevka.zip
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/RobotoMono.zip
+
+unzip Iosevka.zip -d ~/.local/share/fonts/
+unzip RobotoMono.zip -d ~/.local/share/fonts/
+
+mkdir ~/.fonts
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/Hack.zip
+unzip Hack.zip -d ~/.fonts/
+
+cp -rv config/* ~/.config/
+cp -rv seclist ~/
+
+cp fehbg ~/.fehbg
+cp -rv images ~/.images
+
+sudo chmod +x ~/.config/bin/*
+sudo chmod +x ~/.config/polybar/launch.sh
+
+sudo mv  /usr/bin/cat /usr/bin/ca
+sudo mv /usr/bin/bat /usr/bin/cat
+
+wget https://raw.githubusercontent.com/undiabler/nord-rofi-theme/master/nord.rasi
+sudo mv nord.rasi /usr/share/rofi/themes/
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+neofetch && figlet -c finish
+

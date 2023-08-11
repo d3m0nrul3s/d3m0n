@@ -9,8 +9,7 @@ font pango:RobotoMono Nerd Font Regular 9
 floating_modifier $mod
 
 #start polybar
-#exec ~/.config/polybar/launch.sh
-exec --no-startup-id ~/.config/polybar/launch_polybar.sh
+exec ~/.config/polybar/launch.sh
 
 #start chromium
 

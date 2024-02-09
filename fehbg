@@ -1,2 +1,2 @@
 #!/bin/sh
-feh --no-fehbg --bg-fill ~/.images/cyber.jpg
+feh --randomize --no-fehbg --bg-fill ~/.images/*

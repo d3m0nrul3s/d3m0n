@@ -6,7 +6,7 @@ read -p 'What is your system
 Number your system: ' name
 if [ "$name" == "1" ]; then
   sudo pacman -Sy
-  sudo pacman -S i3 i3-gaps polybar feh picom git python zsh slim bat xclip rofi alacritty net-tools mpv flameshot ranger telegram-desktop kitty chromium neofetch figlet base base-devel
+  sudo pacman -S i3 i3-gaps polybar feh picom git python zsh slim bat btop xclip rofi alacritty net-tools mpv flameshot ranger telegram-desktop kitty chromium neofetch figlet base base-devel
 else
   if [ "$name" == "2" ]; then
   apt update

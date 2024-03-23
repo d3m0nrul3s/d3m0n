@@ -7,6 +7,7 @@ Number your system: ' name
 if [ "$name" == "1" ]; then
   sudo pacman -Sy
   sudo pacman -S i3 i3-gaps polybar feh picom git python zsh slim bat btop zip unzip wget curl xclip rofi alacritty net-tools mpv flameshot ranger telegram-desktop kitty chromium neofetch figlet base base-devel
+  curl -O https://blackarch.org/strap.sh
 else
   if [ "$name" == "2" ]; then
   apt update
@@ -31,19 +32,19 @@ mkdir ~/.fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/Hack.zip
 unzip Hack.zip -d ~/.fonts/
 
+mkdir ~/.config
 cp -rv config/* ~/.config/
 cp -rv seclist ~/
 
 cp fehbg ~/.fehbg
 cp -rv images ~/.images
 
-sudo chmod +x ~/.config/bin/*
-sudo chmod +x ~/.config/polybar/launch.sh
+chmod +x ~/.config/bin/*
+chmod +x ~/.config/polybar/launch.sh
 
 sudo mv  /usr/bin/cat /usr/bin/ca
 sudo mv /usr/bin/bat /usr/bin/cat
 
-curl -O https://blackarch.org/strap.sh
 wget https://raw.githubusercontent.com/undiabler/nord-rofi-theme/master/nord.rasi
 sudo mv nord.rasi /usr/share/rofi/themes/
 
